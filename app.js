@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 2000;
 
 const app = express();
 
+app.use(express.json());
 app.use('/api', mealRouter);
 
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
